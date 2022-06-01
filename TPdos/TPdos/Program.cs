@@ -58,8 +58,11 @@ namespace TPdos
 
                 int numeroDos = int.Parse(Console.ReadLine());
 
+                
 
-                Divisiones.Division(numero, numeroDos);
+                float resultado = Divisiones.Division(numero, numeroDos);
+
+                Console.WriteLine($"El Resultado de la Division es: {resultado}");
 
             }
             catch (DivideByZeroException ex)
