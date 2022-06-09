@@ -1,0 +1,13 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EntityFramework.Logic
+{
+    public class CharacterLimitExceededException : Exception
+    {
+        public override string Message => "Hubo un Error";
+    }
+}
