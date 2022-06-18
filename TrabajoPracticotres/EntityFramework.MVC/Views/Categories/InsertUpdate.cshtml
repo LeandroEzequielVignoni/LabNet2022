@@ -1,0 +1,43 @@
+﻿@model EntityFramework.MVC.Models.CategoriesView
+
+@{
+    ViewBag.Title = "Categories Page";
+}
+
+<h1>Inserte o Actualize</h1>
+
+@using (Html.BeginForm("InsertUpdate", "Categories", FormMethod.Post))
+{
+    <br>
+
+    <label>Categoria: </label> @Html.TextBoxFor(x => x.CategoryName, new { id = "categoryNameTxt", onkeyup = "fieldsCheck()" })
+    <br />
+    <label>Id: </label> @Html.TextBoxFor(x => x.Id, new { id = "idTxt", onkeyup = "fieldsCheck()" })
+    <br>
+
+    <h5>Especifique una Id si desea Actualizar</h5>
+    
+    <button type="submit" id="submitBtn" class="btn btn-success" disabled>Submit</button>
+    <br />
+
+    <a href=@Url.Action("Index", "Categories" )>
+        <button type="button" class="btn btn-danger">Volver</button>
+    </a>
+
+    <script>
+        let categoryName = document.getElementById("categoryNameTxt")
+
+        let Id = document.getElementById("idTxt");
+
+        let submitBtn = document.getElementById("submitBtn");
+
+        function fieldsCheck() {
+
+            if (categoryName.value != "") {
+                submitBtn.disabled = false;
+            } else {
+                submitBtn.disabled = true;
+            }
+        }
+    </script>
+}

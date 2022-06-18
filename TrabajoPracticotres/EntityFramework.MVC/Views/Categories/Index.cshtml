@@ -1,0 +1,39 @@
+﻿@model List<EntityFramework.MVC.Models.CategoriesView>
+
+@{
+    ViewBag.Title = "Categories Page";
+}
+
+<h1>Categorias</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scole ="col">Accion</th>     
+            
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var categories in Model)
+        {
+        <tr>
+            <th scope="row">@categories.Id</th>
+            <td>@categories.CategoryName</td>
+            <td>@Html.ActionLink("Borrar", "Delete",  new { id = categories.Id }, new { onclick = "return confirm ('Estas seguro de Borrar?')", }) </td>
+
+            
+        </tr>
+        }
+
+    </tbody>
+
+</table>
+
+<div>
+
+    @Html.ActionLink("Insertar Nueva Categoria/Actualizar", "InsertUpdate")
+
+</div>

@@ -1,0 +1,17 @@
+﻿<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Error</title>
+</head>
+<body>
+    <hgroup>
+        <h1>@ViewBag.Message</h1>
+        <h2>Ocurrio un error al Procesar su Solicitud.</h2>
+        <h2>@ViewBag.Error</h2>
+    </hgroup>
+    <br />
+    <a href=@Url.Action("Index", "Categories" )>
+        <button type="button" class="btn btn-danger">Volver</button>
+    </a>
+</body>
+</html>
