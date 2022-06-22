@@ -1,0 +1,26 @@
+﻿@model List<EntityFramework.MVC.Models.PizzaModel>
+
+@{
+    ViewBag.Title = "Pagina de Pizza";
+}
+
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Crust</th>
+            <th scope="col">Flavor</th>
+            <th scope="col">Size</th>
+            <th scope="col">TableNo</th>
+        </tr>
+    </thead>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <th scope="row">@item.Crust</th>
+    <td>@item.Flavor</td>
+    <td>@item.Size</td>
+    <td>@item.TableNo</td>
+</tr>
+    }
+</table>

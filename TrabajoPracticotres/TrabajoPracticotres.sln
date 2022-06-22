@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework.LogicTests"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework.MVC", "EntityFramework.MVC\EntityFramework.MVC.csproj", "{4CB8AE6E-CEA1-41C0-ABA7-8F795BEB420E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntityFramework.WebApi", "EntityFramework.WebApi\EntityFramework.WebApi.csproj", "{C0E92911-D307-435F-A5EF-03CD589436E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiLogic", "ApiLogic\ApiLogic.csproj", "{6198CF96-50CF-493F-8E73-74EDA93F5F98}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{4CB8AE6E-CEA1-41C0-ABA7-8F795BEB420E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4CB8AE6E-CEA1-41C0-ABA7-8F795BEB420E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4CB8AE6E-CEA1-41C0-ABA7-8F795BEB420E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0E92911-D307-435F-A5EF-03CD589436E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0E92911-D307-435F-A5EF-03CD589436E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0E92911-D307-435F-A5EF-03CD589436E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0E92911-D307-435F-A5EF-03CD589436E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6198CF96-50CF-493F-8E73-74EDA93F5F98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6198CF96-50CF-493F-8E73-74EDA93F5F98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6198CF96-50CF-493F-8E73-74EDA93F5F98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6198CF96-50CF-493F-8E73-74EDA93F5F98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
