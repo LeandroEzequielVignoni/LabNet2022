@@ -6,14 +6,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
+using System.Web.Http.Cors;
 using System.Web.Mvc;
 using HttpDeleteAttribute = System.Web.Http.HttpDeleteAttribute;
 using HttpGetAttribute = System.Web.Http.HttpGetAttribute;
 using HttpPostAttribute = System.Web.Http.HttpPostAttribute;
 using HttpPutAttribute = System.Web.Http.HttpPutAttribute;
 
+
 namespace EntityFramework.WebApi.Controllers
 {
+   [EnableCors(origins: "*", headers: "*", methods: "*")]
+    
     public class CategoriesApiController : ApiController
     {
         // GET: CategoriesControllerApi
