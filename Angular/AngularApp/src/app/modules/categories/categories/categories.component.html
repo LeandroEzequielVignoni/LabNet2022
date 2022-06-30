@@ -1,0 +1,95 @@
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-4">
+
+        <form [formGroup]="form" class="pb-3">
+
+          <div class="form-group">
+            <label for="exampleInputPassword1">Ingrese el Nombre de la Categoria</label>
+            <input type="text" class="form-control" formControlName="CategoryName" placeholder="CategoryName">
+            <div *ngIf="form.get('CategoryName')?.invalid && (form.get('CategoryName')?.dirty || form.get('CategoryName')?.touched)" class="alert alert-danger">
+              Ingrese correctamente los datos
+
+            </div>
+          </div>
+          
+  
+        </form>
+      </div>
+        
+      <div class="col-1" id="guardar">
+
+            
+        <button class="btn btn-primary mb-2 mr-2" (click)="guardar()" [disabled]="this.form.invalid">Guardar</button>
+
+      </div>
+      <div class="col-1" id="cancelar">
+
+        <button class="btn btn-secondary mb-2 mr-2" (click)="cancelarFormulario()">Cancelar</button>
+        
+        
+       
+      </div>
+
+      <div>
+
+        <p>Aprete el boton segun corresponda</p>
+      </div>
+     
+
+      
+
+    </div>
+
+      <h2>Lista de Categorias</h2>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Accion</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of listCategories">
+            <th scope="row">{{ item.Id }}</th>
+            <td>{{ item.CategoryName }}</td>
+            <td>
+              <button
+                type="button"
+                class="btn btn-danger"
+                (click)="borrarCategories(item.Id)"
+              >
+                Borrar
+              </button>
+            </td>
+            
+
+              <td>
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  (click)="editCategory(item.Id, this.formUpdate.get(item.CategoryName)?.value)" [disabled]="this.form.invalid"
+                >
+                  Actualizar
+                </button>
+              </td>
+      
+           
+            
+            
+          </tr>
+          
+        </tbody>
+      </table>
+      
+
+    
+
+
+
+
+
+</div>

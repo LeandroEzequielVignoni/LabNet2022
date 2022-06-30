@@ -1,0 +1,36 @@
+#guardar{
+
+    display: flex;
+    align-items: flex-end;
+
+
+}
+
+#cancelar{
+
+    display: flex;
+    align-items: flex-end;
+
+
+}
+
+label{
+    font-size:larger;
+
+
+
+
+
+}
+
+input{
+
+    display: flex;
+    align-items: flex-end;
+
+
+
+
+
+
+}
